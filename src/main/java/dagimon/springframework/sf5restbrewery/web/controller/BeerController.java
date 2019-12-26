@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RequestMapping("/api/v1/beer")
@@ -25,7 +26,7 @@ public class BeerController {
     }
 
     @PostMapping
-    public ResponseEntity saveNewBeer(@RequestBody BeerDto beerDto) { //accepts a post of beerdto data in json
+    public ResponseEntity saveNewBeer(@Valid @RequestBody BeerDto beerDto) { //accepts a post of beerdto data in json
         BeerDto savedBeerDto =  beerService.saveNewBeer(beerDto);
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Location", "/api/v1/beer/" + savedBeerDto.getId().toString());
@@ -33,7 +34,7 @@ public class BeerController {
     }
 
     @PutMapping("/{beerId}") //update, id value is a read-only
-    public ResponseEntity updateBeer(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
+    public ResponseEntity updateBeer(@PathVariable("beerId") UUID beerId, @Valid @RequestBody BeerDto beerDto) {
         beerService.updateBeer(beerId, beerDto);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);  //204, ok but no content
     }
