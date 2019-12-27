@@ -1,4 +1,4 @@
-package dagimon.springframework.sf5restbrewery.mappers;
+package dagimon.springframework.sf5restbrewery.web.mappers;
 
 import org.springframework.stereotype.Component;
 

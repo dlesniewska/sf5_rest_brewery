@@ -1,4 +1,4 @@
-package dagimon.springframework.sf5restbrewery.mappers;
+package dagimon.springframework.sf5restbrewery.web.mappers;
 
 import dagimon.springframework.sf5restbrewery.domain.Customer;
 import dagimon.springframework.sf5restbrewery.web.model.CustomerDto;
