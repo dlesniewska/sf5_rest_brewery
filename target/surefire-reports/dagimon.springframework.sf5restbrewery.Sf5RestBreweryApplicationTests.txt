@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: dagimon.springframework.sf5restbrewery.Sf5RestBreweryApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.755 s - in dagimon.springframework.sf5restbrewery.Sf5RestBreweryApplicationTests
